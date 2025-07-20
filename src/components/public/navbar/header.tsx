@@ -104,7 +104,7 @@ export const Header = () => {
                 <ThemeToggle />
 
                 <Button asChild size="sm">
-                  <Link href="/producto">
+                  <Link href="/contacto">
                     <span>Empezar</span>
                   </Link>
                 </Button>

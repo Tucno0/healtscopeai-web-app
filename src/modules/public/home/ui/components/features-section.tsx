@@ -1,44 +1,31 @@
 import {
-  Code,
-  Terminal,
   Paintbrush,
   Rocket,
   Book,
   PlusCircle,
+  Search,
+  ChartLine,
+  Users,
 } from 'lucide-react';
 
 const features = [
   {
-    icon: <Code className="h-6 w-6" />,
-    title: 'Developer-Friendly',
-    desc: 'Tailored for developers to create and iterate fast, with minimal overhead and maximum flexibility.',
+    icon: <Search className="h-6 w-6" />,
+    title: 'Diagnóstico Asistido por IA',
+    desc: 'Aprovecha algoritmos avanzados de IA para diagnósticos precisos y oportunos, reduciendo errores y mejorando la atención al paciente.',
   },
   {
-    icon: <Terminal className="h-6 w-6" />,
-    title: 'CLI Support',
-    desc: 'Command-line interface support for seamless development and workflow integration.',
+    icon: <ChartLine className="h-6 w-6" />,
+    title: 'Análisis Predictivo',
+    desc: 'Obtén insights accionables con análisis predictivos, permitiendo intervenciones proactivas y planes de tratamiento personalizados.',
   },
   {
-    icon: <Paintbrush className="h-6 w-6" />,
-    title: 'Easily Customizable',
-    desc: 'Every block is built to be editable. From layout to logic, style to structure—make it your own.',
-  },
-  {
-    icon: <Rocket className="h-6 w-6" />,
-    title: 'v0 Support',
-    desc: 'Launch fast with confidence. Perfect for MVPs, prototypes, and weekend projects.',
-  },
-  {
-    icon: <Book className="h-6 w-6" />,
-    title: 'Full Documentation',
-    desc: 'Comprehensive documentation to understand every feature and maximize your development experience.',
-  },
-  {
-    icon: <PlusCircle className="h-6 w-6" />,
-    title: 'Contribute Yours',
-    desc: 'Add your own blocks to the library and become part of the MVPBlocks community.',
+    icon: <Users className="h-6 w-6" />,
+    title: 'Atención Colaborativa',
+    desc: 'Fomenta una colaboración fluida entre los equipos de atención médica, asegurando una atención coordinada y una comunicación mejorada.',
   },
 ];
+
 export const FeaturesSection = () => {
   return (
     <section className="relative py-14">
@@ -46,11 +33,11 @@ export const FeaturesSection = () => {
         <div className="relative mx-auto max-w-2xl sm:text-center">
           <div className="relative z-10">
             <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter sm:text-4xl md:text-5xl">
-              Let’s help build your MVP
+              Características Clave
             </h3>
             <p className="font-geist mt-3 text-foreground/60">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              congue, nisl eget molestie varius, enim ex faucibus purus.
+              HEALTSCOPEAI ofrece un conjunto de potentes características
+              diseñadas para transformar la prestación de servicios de salud.
             </p>
           </div>
           <div
