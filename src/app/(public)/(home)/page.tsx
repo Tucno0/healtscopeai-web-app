@@ -1,17 +1,7 @@
-import { Footer } from '@/components/public/footer';
-import { FeaturesSection } from '@/modules/public/home/ui/components/features-section';
-import { HeroSection } from '@/modules/public/home/ui/components/hero-section';
-import { LogoCloud } from '@/modules/public/home/ui/components/logo-cloud';
+import { HomeView } from '@/modules/public/home/ui/views/home-view';
 
 const HomePage = () => {
-  return (
-    <>
-      <HeroSection />
-      <LogoCloud />
-      <FeaturesSection />
-      <Footer />
-    </>
-  );
+  return <HomeView />;
 };
 
 export default HomePage;
