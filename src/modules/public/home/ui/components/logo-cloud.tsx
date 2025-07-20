@@ -2,7 +2,7 @@ import { SparklesCore } from '@/components/ui/sparkles';
 
 export const LogoCloud = () => {
   return (
-    <div className="h-screen w-screen overflow-hidden bg-[#121212]">
+    <>
       <div className="mx-auto mt-32 w-screen max-w-2xl">
         <div className="text-center text-3xl text-white">
           <span className="text-rose-200">Trusted by experts.</span>
@@ -64,6 +64,6 @@ export const LogoCloud = () => {
           className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
         />
       </div>
-    </div>
+    </>
   );
 };

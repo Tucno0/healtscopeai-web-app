@@ -9,9 +9,7 @@ export default function PublicLayout({
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="flex-1 bg-[#f4f4f0] dark:bg-[#111111] overflow-hidden">
-        {children}
-      </main>
+      <main className="flex-1 overflow-hidden">{children}</main>
     </div>
   );
 }
