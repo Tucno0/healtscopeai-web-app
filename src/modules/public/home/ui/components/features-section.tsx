@@ -1,12 +1,4 @@
-import {
-  Paintbrush,
-  Rocket,
-  Book,
-  PlusCircle,
-  Search,
-  ChartLine,
-  Users,
-} from 'lucide-react';
+import { Search, ChartLine, Users } from 'lucide-react';
 
 const features = [
   {

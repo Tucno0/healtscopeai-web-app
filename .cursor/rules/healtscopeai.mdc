@@ -1,0 +1,333 @@
+---
+description: for landing pages uis and dashboard uis
+alwaysApply: false
+---
+
+# HealthScope AI - Reglas de Desarrollo del Landing Page
+
+## 🏥 Visión General del Proyecto
+
+HealthScope AI es una startup que brinda servicios de inteligencia artificial a clínicas médicas, incluyendo:
+
+- Automatización de citas con agentes de IA
+- Chatbot médico inteligente
+- Gestión de historial clínico
+- Dashboard administrativo completo
+
+## 🎨 Guías de Diseño
+
+### Paleta de Colores
+
+Siempre usar la paleta de colores que estan como variables en el archivo globals.css
+
+- **Primario**: Azul médico (#2563eb) - Confianza y profesionalismo
+- **Secundario**: Verde salud (#10b981) - Bienestar y crecimiento
+- **Acento**: Naranja (#f97316) - Energía y innovación
+- **Neutral**: Grises (#f8fafc, #64748b, #1e293b)
+- **Éxito**: Verde (#22c55e)
+- **Advertencia**: Amarillo (#eab308)
+- **Error**: Rojo (#ef4444)
+
+### Tipografía
+
+- **Títulos**: Inter, font-weight: 600-700
+- **Cuerpo**: Inter, font-weight: 400-500
+- **Código**: JetBrains Mono (para ejemplos técnicos)
+
+### Espaciado y Layout
+
+- Usar sistema de espaciado de Tailwind (4, 8, 16, 24, 32, 48, 64, 96)
+- Máximo ancho de contenedor: 1200px
+- Padding horizontal: 16px (mobile), 24px (tablet), 32px (desktop)
+
+## 🏗️ Estructura de Componentes
+
+### Organización de Archivos
+
+```
+src/
+├── app/
+│   ├── (public)/           # Rutas públicas del landing
+│   │   ├── (home)/         # Página principal
+│   │   ├── servicios/      # Página de servicios
+│   │   ├── producto/       # Página del producto
+│   │   ├── conocenos/      # Sobre nosotros
+│   │   └── contacto/       # Contacto
+│   └── dashboard/          # Dashboard administrativo (futuro)
+├── components/
+│   ├── public/             # Componentes del landing
+│   │   ├── navbar/
+│   │   ├── hero/
+│   │   ├── features/
+│   │   ├── testimonials/
+│   │   ├── pricing/
+│   │   └── footer/
+│   └── ui/                 # Componentes base (shadcn/ui)
+└── modules/
+    └── public/
+        └── home/
+            ├── ui/
+            │   └── components/
+            └── views/
+```
+
+### Convenciones de Nomenclatura
+
+- **Componentes**: kebab-case (ej: `hero-section.tsx`)
+- **Archivos de página**: `page.tsx`
+- **Layouts**: `layout.tsx`
+- **Hooks personalizados**: `use-*.ts`
+- **Utilidades**: `utils.ts`
+
+## 🎯 Secciones del Landing Page
+
+### 1. Hero Section
+
+- **Título principal**: "Transforma tu clínica con IA"
+- **Subtítulo**: "Automatiza citas, mejora la atención y optimiza la gestión de pacientes"
+- **CTA principal**: "Solicitar Demo Gratuita"
+- **CTA secundario**: "Ver Productos"
+- **Imagen**: Ilustración de IA en entorno médico
+
+### 2. Features Section
+
+Mostrar 3-4 características principales:
+
+- 🤖 **Agente IA para Citas**: "Automatiza la programación 24/7"
+- 💬 **Chatbot Médico**: "Responde consultas de pacientes"
+- 📋 **Historial Clínico**: "Gestión inteligente de datos"
+- 📊 **Dashboard Analytics**: "Métricas en tiempo real"
+
+### 3. Beneficios para Clínicas
+
+- Reducción del 70% en tiempo de programación
+- Mejora del 40% en satisfacción del paciente
+- Ahorro del 30% en costos operativos
+- Cumplimiento HIPAA garantizado
+
+### 4. Casos de Uso
+
+- Clínicas dentales
+- Consultorios médicos
+- Centros de especialidades
+- Hospitales pequeños
+
+### 5. Testimonios
+
+- Incluir testimonios de clientes reales (placeholder)
+- Fotos de profesionales médicos
+- Métricas específicas de mejora
+
+### 6. Pricing
+
+- **Starter**: Para clínicas pequeñas
+- **Professional**: Para clínicas medianas
+- **Enterprise**: Para hospitales y grandes clínicas
+
+### 7. CTA Final
+
+- "Comienza tu transformación digital hoy"
+- Formulario de contacto simplificado
+
+## 🛠️ Estándares de Desarrollo
+
+### React/Next.js
+
+- Usar TypeScript estrictamente
+- Implementar Server Components cuando sea posible
+- Usar App Router de Next.js 13+
+- Implementar lazy loading para imágenes
+
+### Componentes UI
+
+- Usar shadcn/ui como base
+- Crear variantes con class-variance-authority
+- Implementar responsive design mobile-first
+- Usar Tailwind CSS para estilos
+
+### Accesibilidad
+
+- Implementar ARIA labels
+- Asegurar contraste de colores WCAG AA
+- Navegación por teclado
+- Textos alternativos en imágenes
+
+### Performance
+
+- Optimizar imágenes con next/image
+- Implementar lazy loading
+- Minimizar bundle size
+- Usar React.memo cuando sea necesario
+
+### SEO
+
+- Meta tags dinámicos
+- Open Graph tags
+- Schema markup para negocio médico
+- URLs amigables
+
+## 📱 Responsive Design
+
+### Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+### Adaptaciones
+
+- Menú hamburguesa en mobile
+- Stack vertical en mobile
+- Grid adaptativo
+- Tamaños de fuente responsivos
+
+## 🔒 Seguridad y Compliance
+
+### HIPAA Compliance
+
+- Encriptación de datos
+- Autenticación segura
+- Logs de auditoría
+- Política de privacidad
+
+### Formularios
+
+- Validación client-side y server-side
+- Protección CSRF
+- Rate limiting
+- Sanitización de inputs
+
+## 🚀 Funcionalidades Futuras
+
+### Dashboard Administrativo
+
+- Gestión de usuarios y roles
+- Panel de pacientes
+- Historiales clínicos
+- Reportes y analytics
+- Configuración de IA
+
+### Integraciones
+
+- Sistemas de EHR existentes
+- Calendarios (Google, Outlook)
+- Pagos (Stripe, PayPal)
+- Notificaciones (SMS, Email)
+
+## 📝 Convenciones de Código
+
+### Imports
+
+```typescript
+// React y Next.js
+import React from 'react';
+import { NextPage } from 'next';
+
+// Componentes UI
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+
+// Hooks
+import { useMobile } from '@/hooks/use-mobile';
+
+// Utilidades
+import { cn } from '@/lib/utils';
+```
+
+### Estructura de Componentes
+
+```typescript
+interface ComponentProps {
+  title: string;
+  description?: string;
+  className?: string;
+}
+
+export function Component({ title, description, className }: ComponentProps) {
+  return (
+    <div className={cn('base-styles', className)}>
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
+    </div>
+  );
+}
+```
+
+### Manejo de Estados
+
+- Usar React Query para datos del servidor
+- Zustand para estado global
+- React Hook Form para formularios
+- Local state para UI simple
+
+## 🎨 Animaciones y Micro-interacciones
+
+### Librerías
+
+- Framer Motion para animaciones complejas
+- CSS transitions para micro-interacciones
+- Intersection Observer para scroll animations
+
+### Principios
+
+- Animaciones sutiles y profesionales
+- Duración: 200-300ms
+- Easing: ease-out
+- No distraer del contenido principal
+
+## 📊 Analytics y Tracking
+
+### Herramientas
+
+- Vercel Analytics
+- Hotjar para heatmaps
+- Sentry para errores
+- Custom events para conversiones
+
+### Métricas Clave
+
+- Tiempo en página
+- Tasa de conversión
+- Fuentes de tráfico
+- Comportamiento de usuarios
+
+## 🔄 CI/CD y Deployment
+
+### Git Workflow
+
+- Feature branches
+- Pull requests obligatorios
+- Code review
+- Tests automáticos
+
+### Deployment
+
+- Vercel para producción
+- Preview deployments
+- Environment variables seguras
+- Rollback automático
+
+## 📚 Documentación
+
+### Comentarios
+
+- JSDoc para funciones complejas
+- README actualizado
+- Storybook para componentes
+- API documentation
+
+### Mantenimiento
+
+- Dependencias actualizadas
+- Security audits
+- Performance monitoring
+- Regular backups
+
+---
+
+**Nota**: Estas reglas deben actualizarse conforme evolucione el proyecto y se agreguen nuevas funcionalidades.
+description:
+globs:
+alwaysApply: false
+
+---

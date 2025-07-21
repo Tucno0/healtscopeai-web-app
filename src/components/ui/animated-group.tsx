@@ -1,5 +1,5 @@
 'use client';
-import { ReactNode } from 'react';
+import { JSX, ReactNode } from 'react';
 import { motion, Variants } from 'motion/react';
 import React from 'react';
 
@@ -126,8 +126,8 @@ function AnimatedGroup({
 
   return (
     <MotionComponent
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
       variants={containerVariants}
       className={className}
     >
