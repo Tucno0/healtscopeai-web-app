@@ -12,23 +12,22 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import {
-  BarChart,
+  Calendar,
   Camera,
   Database,
   File,
   FileAudio2Icon,
   FileText,
-  Folder,
   HelpCircle,
   LayoutDashboard,
-  List,
+  MessageSquare,
   Search,
   Settings,
   Syringe,
-  Users,
+  UserCheck,
 } from "lucide-react";
 import { NavMain } from "./nav-main";
-import { NavDocuments } from "./nav-documents";
+// import { NavDocuments } from "./nav-documents";
 import { NavSecondary } from "./nav-secondary";
 import { NavUser } from "./nav-user";
 // import Image from "next/image";
@@ -41,24 +40,24 @@ const data = {
       icon: LayoutDashboard,
     },
     {
-      title: "Ciclo de vida",
+      title: "Pacientes",
       url: "#",
-      icon: List,
+      icon: UserCheck,
     },
     {
-      title: "Analíticas",
+      title: "Citas",
       url: "#",
-      icon: BarChart,
+      icon: Calendar,
     },
     {
-      title: "Proyectos",
+      title: "Mensajes",
       url: "#",
-      icon: Folder,
+      icon: MessageSquare,
     },
     {
-      title: "Equipo",
+      title: "Ajustes",
       url: "#",
-      icon: Users,
+      icon: Settings,
     },
   ],
   navClouds: [
@@ -178,7 +177,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
+        {/* <NavDocuments items={data.documents} /> */}
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
 
