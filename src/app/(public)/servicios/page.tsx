@@ -1,7 +1,7 @@
-export default function ServiciosPage() {
-  return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold">Servicios Page</h1>
-    </div>
-  );
-}
+import { ServicesView } from '@/modules/public/services/ui/views/services-view';
+
+const ServiciosPage = () => {
+  return <ServicesView />;
+};
+
+export default ServiciosPage;

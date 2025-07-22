@@ -9,7 +9,7 @@ export const HomeView = () => {
       <HeroSection />
       <LogoCloud />
       <FeaturesSection />
-      <Footer />
+      
     </>
   );
 };

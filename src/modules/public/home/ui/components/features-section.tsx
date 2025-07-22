@@ -36,7 +36,7 @@ export const FeaturesSection = () => {
             className="absolute inset-0 mx-auto h-44 max-w-xs blur-[118px]"
             style={{
               background:
-                'linear-gradient(152.92deg, rgba(192, 15, 102, 0.2) 4.54%, rgba(192, 11, 109, 0.26) 34.2%, rgba(192, 15, 102, 0.1) 77.55%)',
+                'linear-gradient(152.92deg, var(--color-primary) 4.54%, var(--color-chart-2) 34.2%, var(--color-primary) 77.55%)',
             }}
           ></div>
         </div>
@@ -46,9 +46,9 @@ export const FeaturesSection = () => {
             {features.map((item, idx) => (
               <li
                 key={idx}
-                className="transform-gpu space-y-3 rounded-xl border bg-transparent p-4 [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset]"
+                className="transform-gpu space-y-3 rounded-xl border bg-transparent p-4 [box-shadow:0_-20px_80px_-20px_var(--color-primary)_inset]"
               >
-                <div className="w-fit transform-gpu rounded-full border p-4 text-primary [box-shadow:0_-20px_80px_-20px_#ff7aa43f_inset] dark:[box-shadow:0_-20px_80px_-20px_#ff7aa40f_inset]">
+                <div className="w-fit transform-gpu rounded-full border p-4 text-primary [box-shadow:0_-20px_80px_-20px_var(--color-primary)_inset] dark:[box-shadow:0_-20px_80px_-20px_var(--color-primary)_inset]">
                   {item.icon}
                 </div>
                 <h4 className="font-geist text-lg font-bold tracking-tighter">
