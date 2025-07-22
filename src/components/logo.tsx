@@ -73,7 +73,7 @@ const HealthScopeLogo = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Logo = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
+export const Logo = ({ className }: { className?: string }) => {
     return (
         <div className={cn('flex items-center gap-3', className)}>
             <HealthScopeLogo />
@@ -89,7 +89,7 @@ export const Logo = ({ className, uniColor }: { className?: string; uniColor?: b
     )
 }
 
-export const LogoIcon = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
+export const LogoIcon = ({ className }: { className?: string }) => {
     return <HealthScopeLogo className={cn('size-6', className)} />
 }
 

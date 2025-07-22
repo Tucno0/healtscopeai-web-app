@@ -1,5 +1,12 @@
 // Tipos súper básicos para el chatbot
 
+export interface Message {
+  id: string;
+  content: string;
+  role: "user" | "assistant" | "system";
+  timestamp: Date;
+}
+
 export interface SimpleMessage {
   message: string;
 }

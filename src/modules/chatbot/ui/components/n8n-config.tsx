@@ -10,8 +10,8 @@ import { Separator } from "@/components/ui/separator";
 interface WebhookData {
   timestamp: string;
   data: {
-    request?: any;
-    response?: any;
+    request?: Record<string, unknown>;
+    response?: Record<string, unknown>;
     timestamp?: string;
   };
 }
