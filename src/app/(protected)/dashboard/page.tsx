@@ -1,7 +1,0 @@
-import { PanelView } from '@/modules/dashboard/panel/ui/views/panel-view';
-
-const DashboardPage = () => {
-  return <PanelView />;
-};
-
-export default DashboardPage;
