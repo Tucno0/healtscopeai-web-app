@@ -34,51 +34,51 @@ const members = [
   },
 ];
 
-const engineeringTeam = [
-  {
-    name: 'Sofía Ramírez',
-    role: 'Frontend Developer',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Diego Morales',
-    role: 'Backend Developer',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Valeria Torres',
-    role: 'Full Stack Developer',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Roberto Silva',
-    role: 'DevOps Engineer',
-    avatar: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face',
-  },
-];
+// const engineeringTeam = [
+//   {
+//     name: 'Sofía Ramírez',
+//     role: 'Frontend Developer',
+//     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Diego Morales',
+//     role: 'Backend Developer',
+//     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Valeria Torres',
+//     role: 'Full Stack Developer',
+//     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Roberto Silva',
+//     role: 'DevOps Engineer',
+//     avatar: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face',
+//   },
+// ];
 
-const marketingTeam = [
-  {
-    name: 'Carmen Vega',
-    role: 'Marketing Manager',
-    avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Alejandro Ruiz',
-    role: 'Content Strategist',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Patricia López',
-    role: 'Digital Marketing',
-    avatar: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face',
-  },
-  {
-    name: 'Fernando Castro',
-    role: 'SEO Specialist',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face',
-  },
-];
+// const marketingTeam = [
+//   {
+//     name: 'Carmen Vega',
+//     role: 'Marketing Manager',
+//     avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Alejandro Ruiz',
+//     role: 'Content Strategist',
+//     avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Patricia López',
+//     role: 'Digital Marketing',
+//     avatar: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face',
+//   },
+//   {
+//     name: 'Fernando Castro',
+//     role: 'SEO Specialist',
+//     avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face',
+//   },
+// ];
 
 export function TeamSection() {
   return (
@@ -89,14 +89,14 @@ export function TeamSection() {
             Nuestro equipo
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Conoce a las personas apasionadas que hacen posible HEALTSCOPEAI. 
+            Conoce a las personas apasionadas que hacen posible LIRYAL. 
             Nuestro equipo combina experiencia técnica con innovación para crear 
             soluciones que transforman negocios.
           </p>
         </div>
 
         <div>
-          <h3 className="mb-6 text-lg font-medium text-foreground">Liderazgo</h3>
+          {/* <h3 className="mb-6 text-lg font-medium text-foreground">Liderazgo</h3> */}
           <div className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
             {members.map((member, index) => (
               <div key={index} className="text-center">
@@ -117,7 +117,7 @@ export function TeamSection() {
           </div>
         </div>
 
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <h3 className="mb-6 text-lg font-medium text-foreground">Ingeniería</h3>
           <div className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
             {engineeringTeam.map((member, index) => (
@@ -159,7 +159,7 @@ export function TeamSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Mission Statement */}
         <div className="mt-16 text-center">

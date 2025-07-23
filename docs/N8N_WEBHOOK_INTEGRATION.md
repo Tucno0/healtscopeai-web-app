@@ -1,4 +1,4 @@
-# Integración N8N Webhook - HealthScope AI
+# Integración N8N Webhook - LIRYAL
 
 ## 🔗 URL del Webhook
 
@@ -8,9 +8,9 @@ https://n8n.srv915337.hstgr.cloud/webhook-test/a328c3af-b4bf-40bb-b21c-2dff58e3f
 
 ## 📋 Formato de Datos Enviados
 
-### Request (GET)
+### Request (POST)
 ```
-GET /webhook-test/a328c3af-b4bf-40bb-b21c-2dff58e3f552?message=Hola, necesito información sobre telemedicina&sessionId=web-1703123456789-abc123def&timestamp=2023-12-21T10:30:45.123Z&source=web-chat&history=[{"role":"user","content":"¿Qué servicios ofrecen?"},{"role":"assistant","content":"Ofrecemos servicios de telemedicina completos..."}]
+POST /webhook-test/a328c3af-b4bf-40bb-b21c-2dff58e3f552?message=Hola, necesito información sobre telemedicina&sessionId=web-1703123456789-abc123def&timestamp=2023-12-21T10:30:45.123Z&source=web-chat&history=[{"role":"user","content":"¿Qué servicios ofrecen?"},{"role":"assistant","content":"Ofrecemos servicios de telemedicina completos..."}]
 ```
 
 ### Response Esperado
@@ -196,7 +196,7 @@ N8N_WEBHOOK_URL=https://n8n.srv915337.hstgr.cloud/webhook-test/a328c3af-b4bf-40b
 ### Headers de Seguridad
 ```javascript
 {
-  'User-Agent': 'HealthScopeAI-Chatbot/1.0'
+  'User-Agent': 'LIRYAL-Chatbot/1.0'
 }
 ```
 

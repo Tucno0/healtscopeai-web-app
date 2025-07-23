@@ -13,86 +13,36 @@ import {
   Users,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
-// Custom AI Logo Component
-const HealthScopeLogo = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-8 w-8"
-  >
-    {/* Brain/Neural Network Background */}
-    <circle cx="16" cy="16" r="14" fill="url(#brainGradient)" />
-    
-    {/* Neural Network Nodes */}
-    <circle cx="12" cy="10" r="1.5" fill="white" opacity="0.9" />
-    <circle cx="20" cy="10" r="1.5" fill="white" opacity="0.9" />
-    <circle cx="16" cy="16" r="1.5" fill="white" opacity="0.9" />
-    <circle cx="10" cy="22" r="1.5" fill="white" opacity="0.9" />
-    <circle cx="22" cy="22" r="1.5" fill="white" opacity="0.9" />
-    
-    {/* Neural Network Connections */}
-    <path
-      d="M12 10L16 16L20 10"
-      stroke="white"
-      strokeWidth="1"
-      opacity="0.7"
+// Logo Component for Light and Dark Modes
+const LIRYALLogo = () => (
+  <div className="relative">
+    {/* Dark mode logo */}
+    <Image
+      src="/icon-black.png"
+      alt="LIRYAL Logo"
+      width={32}
+      height={32}
+      className="h-8 w-8 dark:block hidden"
     />
-    <path
-      d="M16 16L10 22L22 22"
-      stroke="white"
-      strokeWidth="1"
-      opacity="0.7"
+    {/* Light mode logo */}
+    <Image
+      src="/icon-white.png"
+      alt="LIRYAL Logo"
+      width={32}
+      height={32}
+      className="h-8 w-8 block dark:hidden"
     />
-    <path
-      d="M12 10L10 22"
-      stroke="white"
-      strokeWidth="1"
-      opacity="0.5"
-    />
-    <path
-      d="M20 10L22 22"
-      stroke="white"
-      strokeWidth="1"
-      opacity="0.5"
-    />
-    
-    {/* AI Pulse Effect */}
-    <circle cx="16" cy="16" r="8" stroke="white" strokeWidth="0.5" opacity="0.3">
-      <animate
-        attributeName="r"
-        values="8;12;8"
-        dur="2s"
-        repeatCount="indefinite"
-      />
-      <animate
-        attributeName="opacity"
-        values="0.3;0.1;0.3"
-        dur="2s"
-        repeatCount="indefinite"
-      />
-    </circle>
-    
-    {/* Gradients */}
-    <defs>
-      <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#3B82F6" />
-        <stop offset="50%" stopColor="#8B5CF6" />
-        <stop offset="100%" stopColor="#06B6D4" />
-      </linearGradient>
-    </defs>
-  </svg>
+  </div>
 );
 
 const data = {
-  facebookLink: 'https://facebook.com/healtscopeai',
-  instaLink: 'https://instagram.com/healtscopeai',
-  twitterLink: 'https://twitter.com/healtscopeai',
-  linkedinLink: 'https://linkedin.com/company/healtscopeai',
-  youtubeLink: 'https://youtube.com/@healtscopeai',
+      facebookLink: 'https://facebook.com/liryal',
+    instaLink: 'https://instagram.com/liryal',
+    twitterLink: 'https://twitter.com/liryal',
+    linkedinLink: 'https://linkedin.com/company/liryal',
+    youtubeLink: 'https://youtube.com/@liryal',
   services: {
     telemedicina: '/servicios#telemedicina',
     monitoreo: '/servicios#monitoreo',
@@ -114,13 +64,13 @@ const data = {
     emergencias: '/emergencias',
   },
   contact: {
-    email: 'contacto@healtscopeai.com',
+    email: 'contacto@liryal.com',
     phone: '+51 1 234-5678',
     address: 'Centro Médico Digital, Lima, Perú',
     emergencias: '+51 1 911-0000',
   },
   company: {
-    name: 'HealthScope AI',
+            name: 'LIRYAL',
     description:
       'Líder en soluciones de salud digital con inteligencia artificial. Transformamos la atención médica con tecnología innovadora y atención personalizada.',
   },
@@ -211,16 +161,14 @@ export const Footer = () => {
           <div>
             <div className="flex justify-center gap-3 sm:justify-start">
               <div className="relative">
-                <HealthScopeLogo />
+                <LIRYALLogo />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl opacity-50"></div>
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                  HealthScope
+                  LIRYAL
                 </span>
-                <span className="text-sm font-semibold text-primary -mt-1">
-                  AI
-                </span>
+                
               </div>
             </div>
 
@@ -339,7 +287,7 @@ export const Footer = () => {
           <div className="text-center sm:flex sm:justify-between sm:text-left">
             <p className="text-sm text-muted-foreground">
               <span className="block sm:inline">
-                Todos los derechos reservados. HealthScope AI está comprometido con tu salud y privacidad.
+                Todos los derechos reservados. LIRYAL está comprometido con tu salud y privacidad.
               </span>
             </p>
 

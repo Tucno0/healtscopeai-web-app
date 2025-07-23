@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent': 'HealthScopeAI-ContactForm/1.0',
+        'User-Agent': 'LIRYAL-ContactForm/1.0',
       },
       body: JSON.stringify(formData),
     });

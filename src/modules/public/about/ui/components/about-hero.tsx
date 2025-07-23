@@ -20,13 +20,13 @@ export function AboutHero() {
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
               Las personas que hacen posible{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                HEALTSCOPEAI
+                LIRYAL
               </span>
             </h1>
             
             <div className="space-y-4">
               <p className="text-xl font-medium text-foreground">
-                Detrás de cada avance en HEALTSCOPEAI hay un equipo apasionado por la tecnología y la innovación.
+                Detrás de cada avance en LIRYAL hay un equipo apasionado por la tecnología y la innovación.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Nuestro grupo de profesionales reúne experiencia en automatización, inteligencia artificial, 

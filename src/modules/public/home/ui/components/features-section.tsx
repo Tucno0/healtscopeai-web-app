@@ -28,7 +28,7 @@ export const FeaturesSection = () => {
               Características Clave
             </h3>
             <p className="font-geist mt-3 text-foreground/60">
-              HEALTSCOPEAI ofrece un conjunto de potentes características
+              LIRYAL ofrece un conjunto de potentes características
               diseñadas para transformar la prestación de servicios de salud.
             </p>
           </div>

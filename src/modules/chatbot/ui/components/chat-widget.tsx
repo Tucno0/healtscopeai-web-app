@@ -19,7 +19,7 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      content: "¡Hola! Soy el asistente de HealthScope AI. ¿En qué puedo ayudarte hoy?",
+      content: "¡Hola! Soy el asistente de LIRYAL. ¿En qué puedo ayudarte hoy?",
       role: "assistant",
       timestamp: new Date(),
     },
@@ -92,7 +92,7 @@ export function ChatWidget() {
     setMessages([
       {
         id: "1",
-        content: "¡Hola! Soy el asistente de HealthScope AI. ¿En qué puedo ayudarte hoy?",
+        content: "¡Hola! Soy el asistente de LIRYAL. ¿En qué puedo ayudarte hoy?",
         role: "assistant",
         timestamp: new Date(),
       },

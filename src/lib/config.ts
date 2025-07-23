@@ -10,6 +10,6 @@ export const config = {
   },
   n8n: {
     webhookUrl: process.env.N8N_WEBHOOK_URL || "https://n8n.srv915337.hstgr.cloud/webhook-test/a328c3af-b4bf-40bb-b21c-2dff58e3f552",
-    userAgent: process.env.N8N_USER_AGENT || "HealthScopeAI-Chatbot/1.0",
+    userAgent: process.env.N8N_USER_AGENT || "LIRYAL-Chatbot/1.0",
   },
 } as const; 

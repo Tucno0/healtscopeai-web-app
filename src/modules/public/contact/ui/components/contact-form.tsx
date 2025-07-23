@@ -284,7 +284,7 @@ export function ContactForm() {
             <div className="text-center p-6 bg-card/60 backdrop-blur-sm rounded-xl border border-border">
               <Mail className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground text-sm">contacto@healtscopeai.com</p>
+              <p className="text-muted-foreground text-sm">contacto@liryal.com</p>
             </div>
             
                          <div className="text-center p-6 bg-card/60 backdrop-blur-sm rounded-xl border border-border">
