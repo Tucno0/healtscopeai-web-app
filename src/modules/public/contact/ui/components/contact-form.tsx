@@ -36,38 +36,27 @@ export function ContactForm() {
     try {
       console.log("📤 Enviando formulario de contacto:", formData);
 
-      // Construir URL con todos los campos como parámetros
-      const webhookUrl = "https://n8n.srv915337.hstgr.cloud/webhook-test/a328c3af-b4bf-40bb-b21c-2dff58e3f552";
-      const url = new URL(webhookUrl);
-      
-      // Agregar todos los campos como query parameters
-      Object.entries(formData).forEach(([key, value]) => {
-        if (value) {
-          url.searchParams.set(key, value);
-        }
-      });
-
-      console.log("🔗 URL completa:", url.toString());
-
-      const response = await fetch(url.toString(), {
-        method: 'GET',
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          'User-Agent': 'HealthScopeAI-ContactForm/1.0',
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify(formData),
       });
 
-      console.log("📥 Respuesta de n8n:", {
+      console.log("📥 Respuesta del servidor:", {
         status: response.status,
         statusText: response.statusText,
         ok: response.ok
       });
 
       if (!response.ok) {
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
+        const errorData = await response.json();
+        throw new Error(errorData.error || `Error ${response.status}: ${response.statusText}`);
       }
 
       const result = await response.json();
-      console.log("📋 Datos recibidos:", result);
+      console.log("✅ Formulario enviado exitosamente:", result);
 
       setSubmitStatus("success");
       setFormData({
