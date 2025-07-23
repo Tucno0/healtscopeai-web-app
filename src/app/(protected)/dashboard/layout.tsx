@@ -1,17 +1,17 @@
-import { Metadata } from "next";
-import { cookies } from "next/headers";
+import { Metadata } from 'next';
+import { cookies } from 'next/headers';
 
-import { SiteHeader } from "@/components/dashboard/navbar/site-header";
-import { AppSidebar } from "@/components/dashboard/sidenav/app-sidebar";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-import { ActiveThemeProvider } from "@/components/theme/active-theme";
+import { SiteHeader } from '@/components/dashboard/navbar/site-header';
+import { AppSidebar } from '@/components/dashboard/sidenav/app-sidebar';
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+import { ActiveThemeProvider } from '@/components/theme/active-theme';
 
 export const metadata: Metadata = {
   title: {
-    default: "Dashboard",
-    template: "%s | Dashboard",
+    default: 'Dashboard',
+    template: '%s | Dashboard',
   },
-  description: "Dashboard de SIGAEST",
+  description: 'Dashboard de SIGAEST',
 };
 
 interface Props {
@@ -21,7 +21,7 @@ interface Props {
 const DashboardLayout = async ({ children }: Props) => {
   // Persisting the sidebar state in the cookie.
   const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
+  const defaultOpen = cookieStore.get('sidebar_state')?.value === 'true';
 
   return (
     <ActiveThemeProvider>
@@ -29,8 +29,8 @@ const DashboardLayout = async ({ children }: Props) => {
         defaultOpen={defaultOpen}
         style={
           {
-            "--sidebar-width": "calc(var(--spacing) * 72)",
-            "--header-height": "calc(var(--spacing) * 12)",
+            '--sidebar-width': 'calc(var(--spacing) * 72)',
+            '--header-height': 'calc(var(--spacing) * 12)',
           } as React.CSSProperties
         }
       >
@@ -38,7 +38,9 @@ const DashboardLayout = async ({ children }: Props) => {
 
         <SidebarInset>
           <SiteHeader />
-          <div className="flex flex-1 flex-col">{children}</div>
+          <div className="@container/main flex flex-1 flex-col gap-4 p-4 lg:px-6 md:gap-6 md:py-6">
+            {children}
+          </div>
         </SidebarInset>
       </SidebarProvider>
     </ActiveThemeProvider>

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 
 import {
   Sidebar,
@@ -10,7 +10,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from '@/components/ui/sidebar';
 import {
   Calendar,
   Camera,
@@ -25,120 +25,120 @@ import {
   Settings,
   Syringe,
   UserCheck,
-} from "lucide-react";
-import { NavMain } from "./nav-main";
+} from 'lucide-react';
+import { NavMain } from './nav-main';
 // import { NavDocuments } from "./nav-documents";
-import { NavSecondary } from "./nav-secondary";
-import { NavUser } from "./nav-user";
+import { NavSecondary } from './nav-secondary';
+import { NavUser } from './nav-user';
 // import Image from "next/image";
 
 const data = {
   navMain: [
     {
-      title: "Panel",
-      url: "#",
+      title: 'Panel',
+      url: '/dashboard',
       icon: LayoutDashboard,
     },
     {
-      title: "Pacientes",
-      url: "#",
+      title: 'Pacientes',
+      url: '/dashboard/pacientes',
       icon: UserCheck,
     },
     {
-      title: "Citas",
-      url: "#",
+      title: 'Citas',
+      url: '/dashboard/citas',
       icon: Calendar,
     },
     {
-      title: "Mensajes",
-      url: "#",
+      title: 'Mensajes',
+      url: '/dashboard/mensajes',
       icon: MessageSquare,
     },
     {
-      title: "Ajustes",
-      url: "#",
+      title: 'Ajustes',
+      url: '/dashboard/ajustes',
       icon: Settings,
     },
   ],
   navClouds: [
     {
-      title: "Captura",
+      title: 'Captura',
       icon: Camera,
       isActive: true,
-      url: "#",
+      url: '#',
       items: [
         {
-          title: "Propuestas activas",
-          url: "#",
+          title: 'Propuestas activas',
+          url: '#',
         },
         {
-          title: "Archivadas",
-          url: "#",
+          title: 'Archivadas',
+          url: '#',
         },
       ],
     },
     {
-      title: "Propuesta",
+      title: 'Propuesta',
       icon: File,
-      url: "#",
+      url: '#',
       items: [
         {
-          title: "Propuestas activas",
-          url: "#",
+          title: 'Propuestas activas',
+          url: '#',
         },
         {
-          title: "Archivadas",
-          url: "#",
+          title: 'Archivadas',
+          url: '#',
         },
       ],
     },
     {
-      title: "Indicaciones",
+      title: 'Indicaciones',
       icon: FileAudio2Icon,
-      url: "#",
+      url: '#',
       items: [
         {
-          title: "Propuestas activas",
-          url: "#",
+          title: 'Propuestas activas',
+          url: '#',
         },
         {
-          title: "Archivadas",
-          url: "#",
+          title: 'Archivadas',
+          url: '#',
         },
       ],
     },
   ],
   navSecondary: [
     {
-      title: "Configuración",
-      url: "#",
+      title: 'Configuración',
+      url: '#',
       icon: Settings,
     },
     {
-      title: "Obtener ayuda",
-      url: "#",
+      title: 'Obtener ayuda',
+      url: '#',
       icon: HelpCircle,
     },
     {
-      title: "Buscar",
-      url: "#",
+      title: 'Buscar',
+      url: '#',
       icon: Search,
     },
   ],
   documents: [
     {
-      name: "Biblioteca de datos",
-      url: "#",
+      name: 'Biblioteca de datos',
+      url: '#',
       icon: Database,
     },
     {
-      name: "Informes",
-      url: "#",
+      name: 'Informes',
+      url: '#',
       icon: FileText,
     },
     {
-      name: "Asistente de texto",
-      url: "#",
+      name: 'Asistente de texto',
+      url: '#',
       icon: FileText,
     },
   ],
