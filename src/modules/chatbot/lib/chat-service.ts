@@ -1,11 +1,14 @@
 // Servicio súper básico para enviar mensajes a n8n
+import { config } from "@/lib/config";
 
 export class ChatService {
   private static instance: ChatService;
   private webhookUrl: string;
+  private userAgent: string;
 
   private constructor() {
-    this.webhookUrl = "https://n8n.srv915337.hstgr.cloud/webhook-test/a328c3af-b4bf-40bb-b21c-2dff58e3f552";
+    this.webhookUrl = config.n8n.webhookUrl;
+    this.userAgent = config.n8n.userAgent;
   }
 
   public static getInstance(): ChatService {
@@ -29,7 +32,7 @@ export class ChatService {
       const response = await fetch(url.toString(), {
         method: 'GET',
         headers: {
-          'User-Agent': 'HealthScopeAI-Chatbot/1.0',
+          'User-Agent': this.userAgent,
         },
       });
       

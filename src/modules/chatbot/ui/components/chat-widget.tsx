@@ -120,12 +120,7 @@ export function ChatWidget() {
           <Bot className="h-50 w-50 text-white" />
         </Button>
         
-        {/* Chat Text */}
-        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
-          <span className="text-xs font-medium text-gray-600 bg-white/90 px-2 py-1 rounded-full shadow-sm">
-            Chat
-          </span>
-        </div>
+
       </div>
 
       {/* Chat Interface */}
