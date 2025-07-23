@@ -203,12 +203,9 @@ export function ContactForm() {
                       <SelectValue placeholder="Selecciona un asunto" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="general">Consulta General</SelectItem>
-                      <SelectItem value="support">Soporte Técnico</SelectItem>
-                      <SelectItem value="sales">Ventas y Precios</SelectItem>
-                      <SelectItem value="partnership">Alianzas Comerciales</SelectItem>
-                      <SelectItem value="demo">Solicitar Demo</SelectItem>
-                      <SelectItem value="other">Otro</SelectItem>
+                      <SelectItem value="Automatizaciones">Automatizaciones</SelectItem>
+                      <SelectItem value="Consultas">Consultas</SelectItem>
+                      <SelectItem value="Otros">Otros</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
