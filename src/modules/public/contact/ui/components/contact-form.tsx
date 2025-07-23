@@ -115,7 +115,7 @@ export function ContactForm() {
             </CardHeader>
             
             <CardContent className="space-y-8 p-8">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} suppressHydrationWarning>
                 {/* Contact Information Section */}
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -132,6 +132,7 @@ export function ContactForm() {
                           placeholder="Tu nombre" 
                           className="border-border focus:border-primary focus:ring-primary/20 transition-all duration-300"
                           required
+                          suppressHydrationWarning
                         />
                       </div>
                     </div>
@@ -149,6 +150,7 @@ export function ContactForm() {
                           placeholder="Tu apellido" 
                           className="border-border focus:border-primary focus:ring-primary/20 transition-all duration-300"
                           required
+                          suppressHydrationWarning
                         />
                       </div>
                     </div>
@@ -168,6 +170,7 @@ export function ContactForm() {
                         placeholder="tu@email.com" 
                         className="border-border focus:border-primary focus:ring-primary/20 transition-all duration-300"
                         required
+                        suppressHydrationWarning
                       />
                     </div>
                   </div>
@@ -184,6 +187,7 @@ export function ContactForm() {
                         onChange={(e) => handleInputChange("phone", e.target.value)}
                         placeholder="+51 999 123 456" 
                         className="border-border focus:border-primary focus:ring-primary/20 transition-all duration-300"
+                        suppressHydrationWarning
                       />
                     </div>
                   </div>
@@ -223,6 +227,7 @@ export function ContactForm() {
                     rows={5}
                     className="border-border focus:border-primary focus:ring-primary/20 transition-all duration-300 resize-none"
                     required
+                    suppressHydrationWarning
                   />
                 </div>
                 

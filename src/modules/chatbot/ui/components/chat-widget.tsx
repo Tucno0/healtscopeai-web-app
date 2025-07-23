@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { X, Send, Bot, User, RotateCcw } from "lucide-react";
+import { MessageSquare, X, Send, Bot, User, RotateCcw } from "lucide-react";
 
 interface Message {
   id: string;
@@ -42,39 +42,15 @@ export function ChatWidget() {
     setIsLoading(true);
 
     try {
-      // Verificar si hay configuración de n8n
-      const n8nConfig = localStorage.getItem('n8n-config');
-      let apiEndpoint = "/api/chat";
-      let requestBody: {
-        message: string;
-        history: Array<{ role: string; content: string }>;
-        webhookUrl?: string;
-        apiKey?: string;
-        sessionId?: string;
-      } = {
-        message: inputValue,
-        history: messages.map(m => ({ role: m.role, content: m.content })),
-      };
-
-      if (n8nConfig) {
-        const config = JSON.parse(n8nConfig);
-        if (config.enabled && config.webhookUrl) {
-          apiEndpoint = "/api/chat/n8n";
-          requestBody = {
-            ...requestBody,
-            webhookUrl: config.webhookUrl,
-            apiKey: config.apiKey,
-            sessionId: `web-${Date.now()}`
-          };
-        }
-      }
-
-      const response = await fetch(apiEndpoint, {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(requestBody),
+        body: JSON.stringify({
+          message: inputValue,
+          history: messages.map(m => ({ role: m.role, content: m.content })),
+        }),
       });
 
       if (!response.ok) {

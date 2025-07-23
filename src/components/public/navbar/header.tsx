@@ -12,10 +12,8 @@ import { ThemeToggle } from '@/components/theme/theme-toggle';
 
 const menuItems = [
   { name: 'Servicios', href: '/servicios' },
-  { name: 'Producto', href: '/producto' },
   { name: 'Conócenos', href: '/conocenos' },
   { name: 'Contacto', href: '/contacto' },
-  { name: 'Config Chatbot', href: '/chatbot-config' },
 ];
 
 export const Header = () => {
