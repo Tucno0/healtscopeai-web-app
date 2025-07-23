@@ -35,10 +35,10 @@ export function NavUser() {
     image: 'https://via.placeholder.com/150',
   };
 
-  // Add safety check to ensure user is always defined
-  if (!user) {
-    return null; // or return a loading state
-  }
+  // // Add safety check to ensure user is always defined
+  // if (!user) {
+  //   return null; // or return a loading state
+  // }
 
   return (
     <SidebarMenu>
