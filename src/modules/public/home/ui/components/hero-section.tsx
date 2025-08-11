@@ -72,7 +72,8 @@ export const HeroSection = () => {
               as="h1"
               className="mt-8 text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]"
             >
-              Optimiza el flujo de trabajo de tu empresa o clínica
+            Automatiza tu Mundo con Inteligencia Artificial
+              {/*Optimiza el flujo de trabajo de tu empresa o clínica*/}
             </TextEffect>
 
             <TextEffect
@@ -83,9 +84,13 @@ export const HeroSection = () => {
               as="p"
               className="mx-auto mt-8 max-w-2xl text-balance text-lg"
             >
-              Automatización con inteligencia artificial para optimizar el flujo
+              Automatizamos el flujo de trabajo de tu empresa o clínica con inteligencia 
+              artificial, haciendo que cada tarea y proceso se ejecute sin pausas, con 
+              precisión absoluta y sin intervención humana. Bienvenido al futuro de la 
+              eficiencia.
+              {/*Automatización con inteligencia artificial para optimizar el flujo
               de trabajo de tu empresa o clínica, y mejorar la experiencia de
-              tus clientes.
+              tus clientes.*/}
             </TextEffect>
 
             <AnimatedGroup
