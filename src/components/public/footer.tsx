@@ -1,106 +1,178 @@
 import {
-  Dribbble,
   Facebook,
-  Github,
   Instagram,
   Mail,
   MapPin,
   Phone,
   Twitter,
+  Linkedin,
+  Youtube,
+  Heart,
+  Shield,
+  Clock,
+  Users,
 } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+
+// Logo Component for Light and Dark Modes
+const LIRYALLogo = () => (
+  <div className="relative">
+    {/* Dark mode logo */}
+    <Image
+      src="/icon-black.png"
+      alt="LIRYAL Logo"
+      width={32}
+      height={32}
+      className="h-8 w-8 dark:block hidden"
+    />
+    {/* Light mode logo */}
+    <Image
+      src="/icon-white.png"
+      alt="LIRYAL Logo"
+      width={32}
+      height={32}
+      className="h-8 w-8 block dark:hidden"
+    />
+  </div>
+);
 
 const data = {
-  facebookLink: 'https://facebook.com/mvpblocks',
-  instaLink: 'https://instagram.com/mvpblocks',
-  twitterLink: 'https://twitter.com/mvpblocks',
-  githubLink: 'https://github.com/mvpblocks',
-  dribbbleLink: 'https://dribbble.com/mvpblocks',
+      facebookLink: 'https://facebook.com/liryal',
+    instaLink: 'https://instagram.com/liryal',
+    twitterLink: 'https://twitter.com/liryal',
+    linkedinLink: 'https://linkedin.com/company/liryal',
+    youtubeLink: 'https://youtube.com/@liryal',
   services: {
-    webdev: '/web-development',
-    webdesign: '/web-design',
-    marketing: '/marketing',
-    googleads: '/google-ads',
+    telemedicina: '/servicios#telemedicina',
+    monitoreo: '/servicios#monitoreo',
+    ia: '/servicios#ia-diagnostica',
+    analytics: '/servicios#analytics',
+    seguridad: '/servicios#seguridad',
+    integracion: '/servicios#integracion',
   },
   about: {
-    history: '/company-history',
-    team: '/meet-the-team',
-    handbook: '/employee-handbook',
-    careers: '/careers',
+    historia: '/conocenos#historia',
+    equipo: '/conocenos#equipo',
+    mision: '/conocenos#mision',
+    valores: '/conocenos#valores',
   },
   help: {
     faqs: '/faqs',
-    support: '/support',
-    livechat: '/live-chat',
+    soporte: '/soporte',
+    chat: '/chat',
+    emergencias: '/emergencias',
   },
   contact: {
-    email: 'hello@mvpblocks.com',
-    phone: '+91 8637373116',
-    address: 'Kolkata, West Bengal, India',
+    email: 'contacto@liryal.com',
+    phone: '+51 1 234-5678',
+    address: 'Centro Médico Digital, Lima, Perú',
+    emergencias: '+51 1 911-0000',
   },
   company: {
-    name: 'Mvpblocks',
+            name: 'LIRYAL',
     description:
-      'Building beautiful and functional web experiences with modern technologies. We help startups and businesses create their digital presence.',
-    logo: '/logo.webp',
+      'Líder en soluciones de salud digital con inteligencia artificial. Transformamos la atención médica con tecnología innovadora y atención personalizada.',
   },
+  features: [
+    {
+      icon: Shield,
+      title: 'Seguridad HIPAA',
+      description: 'Cumplimiento total con estándares de seguridad médica'
+    },
+    {
+      icon: Clock,
+      title: 'Atención 24/7',
+      description: 'Soporte médico disponible en cualquier momento'
+    },
+    {
+      icon: Users,
+      title: 'Equipo Certificado',
+      description: 'Profesionales médicos especializados'
+    },
+    {
+      icon: Heart,
+      title: 'Cuidado Personalizado',
+      description: 'Atención individualizada para cada paciente'
+    }
+  ]
 };
 
 const socialLinks = [
   { icon: Facebook, label: 'Facebook', href: data.facebookLink },
   { icon: Instagram, label: 'Instagram', href: data.instaLink },
   { icon: Twitter, label: 'Twitter', href: data.twitterLink },
-  { icon: Github, label: 'GitHub', href: data.githubLink },
-  { icon: Dribbble, label: 'Dribbble', href: data.dribbbleLink },
+  { icon: Linkedin, label: 'LinkedIn', href: data.linkedinLink },
+  { icon: Youtube, label: 'YouTube', href: data.youtubeLink },
 ];
 
 const aboutLinks = [
-  { text: 'Company History', href: data.about.history },
-  { text: 'Meet the Team', href: data.about.team },
-  { text: 'Employee Handbook', href: data.about.handbook },
-  { text: 'Careers', href: data.about.careers },
+  { text: 'Nuestra Historia', href: data.about.historia },
+  { text: 'Conoce Nuestro Equipo', href: data.about.equipo },
+  { text: 'Misión y Visión', href: data.about.mision },
+  { text: 'Valores Corporativos', href: data.about.valores },
 ];
 
 const serviceLinks = [
-  { text: 'Web Development', href: data.services.webdev },
-  { text: 'Web Design', href: data.services.webdesign },
-  { text: 'Marketing', href: data.services.marketing },
-  { text: 'Google Ads', href: data.services.googleads },
+  { text: 'Telemedicina', href: data.services.telemedicina },
+  { text: 'Monitoreo Continuo', href: data.services.monitoreo },
+  { text: 'IA Diagnóstica', href: data.services.ia },
+  { text: 'Analytics de Salud', href: data.services.analytics },
+  { text: 'Seguridad Digital', href: data.services.seguridad },
+  { text: 'Integración de Sistemas', href: data.services.integracion },
 ];
 
 const helpfulLinks = [
-  { text: 'FAQs', href: data.help.faqs },
-  { text: 'Support', href: data.help.support },
-  { text: 'Live Chat', href: data.help.livechat, hasIndicator: true },
+  { text: 'Preguntas Frecuentes', href: data.help.faqs },
+  { text: 'Soporte Técnico', href: data.help.soporte },
+  { text: 'Chat en Vivo', href: data.help.chat, hasIndicator: true },
+  { text: 'Emergencias', href: data.help.emergencias },
 ];
 
 const contactInfo = [
-  { icon: Mail, text: data.contact.email },
-  { icon: Phone, text: data.contact.phone },
+  { icon: Mail, text: data.contact.email, href: `mailto:${data.contact.email}` },
+  { icon: Phone, text: data.contact.phone, href: `tel:${data.contact.phone}` },
   { icon: MapPin, text: data.contact.address, isAddress: true },
+  { icon: Phone, text: `Emergencias: ${data.contact.emergencias}`, href: `tel:${data.contact.emergencias}`, isEmergency: true },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="mt-16 w-full place-self-end rounded-t-xl bg-secondary dark:bg-secondary/20">
+    <footer className="mt-16 w-full place-self-end rounded-t-xl bg-gradient-to-b from-background to-muted/30 dark:from-background dark:to-muted/20 border-t border-border shadow-lg">
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {data.features.map((feature, index) => (
+            <div key={index} className="text-center group">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 text-primary mb-4 shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                <feature.icon className="w-7 h-7" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <div className="flex justify-center gap-2 text-primary sm:justify-start">
-              <Image
-                src={'https://blocks.mvp-subha.me/logo.webp'}
-                alt="logo"
-                className="h-8 w-8 rounded-full"
-                width={32}
-                height={32}
-              />
-              <span className="text-2xl font-semibold">
-                {data.company.name}
-              </span>
+            <div className="flex justify-center gap-3 sm:justify-start">
+              <div className="relative">
+                <LIRYALLogo />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl opacity-50"></div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+                  LIRYAL
+                </span>
+                
+              </div>
             </div>
 
-            <p className="mt-6 max-w-md text-center leading-relaxed text-foreground/50 sm:max-w-xs sm:text-left">
+            <p className="mt-6 max-w-md text-center leading-relaxed text-muted-foreground sm:max-w-xs sm:text-left">
               {data.company.description}
             </p>
 
@@ -109,7 +181,7 @@ export const Footer = () => {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="text-primary transition hover:text-primary/80"
+                    className="text-muted-foreground transition-all duration-300 hover:text-primary hover:scale-110 p-2 rounded-full hover:bg-primary/10"
                   >
                     <span className="sr-only">{label}</span>
                     <Icon className="size-6" />
@@ -120,52 +192,52 @@ export const Footer = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
-            <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">About Us</p>
+            <div className="text-center sm:text-left group">
+              <p className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">Sobre Nosotros</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {aboutLinks.map(({ text, href }) => (
                   <li key={text}>
-                    <a
-                      className="text-secondary-foreground/70 transition"
+                    <Link
+                      className="text-muted-foreground transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block"
                       href={href}
                     >
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Our Services</p>
+            <div className="text-center sm:text-left group">
+              <p className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">Nuestros Servicios</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {serviceLinks.map(({ text, href }) => (
                   <li key={text}>
-                    <a
-                      className="text-secondary-foreground/70 transition"
+                    <Link
+                      className="text-muted-foreground transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block"
                       href={href}
                     >
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Helpful Links</p>
+            <div className="text-center sm:text-left group">
+              <p className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">Enlaces Útiles</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {helpfulLinks.map(({ text, href, hasIndicator }) => (
                   <li key={text}>
-                    <a
+                    <Link
                       href={href}
                       className={`${
                         hasIndicator
                           ? 'group flex justify-center gap-1.5 sm:justify-start'
-                          : 'text-secondary-foreground/70 transition'
+                          : 'text-muted-foreground transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block'
                       }`}
                     >
-                      <span className="text-secondary-foreground/70 transition">
+                      <span className="text-muted-foreground transition-all duration-300 hover:text-primary">
                         {text}
                       </span>
                       {hasIndicator && (
@@ -174,32 +246,36 @@ export const Footer = () => {
                           <span className="relative inline-flex size-2 rounded-full bg-primary" />
                         </span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Contact Us</p>
+            <div className="text-center sm:text-left group">
+              <p className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">Contacto</p>
               <ul className="mt-8 space-y-4 text-sm">
-                {contactInfo.map(({ icon: Icon, text, isAddress }) => (
+                {contactInfo.map(({ icon: Icon, text, href, isAddress, isEmergency }) => (
                   <li key={text}>
-                    <a
-                      className="flex items-center justify-center gap-1.5 sm:justify-start"
-                      href="#"
+                    <Link
+                      className={`flex items-center justify-center gap-1.5 sm:justify-start transition-all duration-300 ${
+                        isEmergency ? 'text-destructive hover:text-destructive/80 hover:scale-105' : 'text-muted-foreground hover:text-primary hover:translate-x-1'
+                      }`}
+                      href={href || '#'}
                     >
-                      <Icon className="size-5 shrink-0 text-primary shadow-sm" />
+                      <Icon className={`size-5 shrink-0 shadow-sm transition-all duration-300 ${
+                        isEmergency ? 'text-destructive' : 'text-primary'
+                      }`} />
                       {isAddress ? (
-                        <address className="-mt-0.5 flex-1 not-italic text-secondary-foreground/70 transition">
+                        <address className="-mt-0.5 flex-1 not-italic text-muted-foreground transition-all duration-300 hover:text-primary">
                           {text}
                         </address>
                       ) : (
-                        <span className="flex-1 text-secondary-foreground/70 transition">
+                        <span className="flex-1 text-muted-foreground transition-all duration-300 hover:text-primary">
                           {text}
                         </span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -207,14 +283,16 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 border-t pt-6">
+        <div className="mt-12 border-t border-border/50 pt-6">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
-            <p className="text-sm">
-              <span className="block sm:inline">All rights reserved.</span>
+            <p className="text-sm text-muted-foreground">
+              <span className="block sm:inline">
+                Todos los derechos reservados. LIRYAL está comprometido con tu salud y privacidad.
+              </span>
             </p>
 
-            <p className="text-secondary-foreground/70 mt-4 text-sm transition sm:order-first sm:mt-0">
-              &copy; 2025 {data.company.name}
+            <p className="text-muted-foreground mt-4 text-sm transition-all duration-300 sm:order-first sm:mt-0 hover:text-primary">
+              &copy; 2025 {data.company.name} - Transformando la Salud Digital
             </p>
           </div>
         </div>
